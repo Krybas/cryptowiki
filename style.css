@@ -23,7 +23,7 @@ h1, h2 {
     font-size: 38px;
     font-weight: bold;
     color: #c1e3dc;
-    margin-right: 200px;
+    margin-right: 100px;
     padding-left: 30px;
 }
 
@@ -54,4 +54,17 @@ nav a:hover, a.active{
     text-shadow: 0 0 10px #14b8d5;
     box-shadow: 0px 0px 15px #0f2e28, 0px 0px 25px rgba(176, 216, 223, 0.5);
     cursor: pointer;
+}
+.content {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content h2, p {
+    text-align: center;
+}
+hr {
+    border-color: rgb(8, 218, 200);
+    border-width: 1px;
+    margin: 25px;
 }
