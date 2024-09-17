@@ -186,3 +186,15 @@ footer p:last-child {
     margin: 20px 30px;
     scroll-margin-top: 100px;
 }
+
+.main-section h2 {
+    color: #c1e3dc;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.main-section span {
+    color: #76ebd4;
+    font-size: 20px;
+}
+
