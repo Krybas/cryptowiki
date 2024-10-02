@@ -190,6 +190,14 @@ footer p:last-child {
     scroll-margin-top: 130px;
 }
 
+.alphabet h2 {
+    color: #c1e3dc;
+    font-size: 30px;
+    margin-left: 17%;
+    margin-right: 17%;
+    text-align: center;
+}
+
 .main-section, .sidebar {
     background-color: #212121;
     border: 2px solid #171717;
@@ -246,8 +254,6 @@ footer p:last-child {
 }
 
 .key-takeaways li {
-    color: #fbfcfc;
-    font-size: 16px;
     line-height: 1.6;
     margin-bottom: 10px;
     position: relative;
@@ -263,6 +269,22 @@ footer p:last-child {
     top: 0;
 }
 
+#advantages li {
+    list-style: none;
+}
+
+#advantages li::before {
+    content: "🟩";
+    position: inherit;
+}
+#disadvantages li::before {
+    content: "🟥";
+    position: inherit;
+}
+#disadvantages li {
+    list-style: none;
+}
+
 .sidebar {
     display: flex;
     flex-wrap: wrap;
@@ -272,9 +294,9 @@ footer p:last-child {
     margin: 20px 0;
 }
 .sidebar .card {
-    padding: 15px;
+    padding: 7px;
     width: 35%;
-    max-width: 280px;
+    max-width: 250px;
     margin: 10px;
     min-width: 150px;
 }
@@ -385,7 +407,6 @@ footer p:last-child {
     }
     .alphabet a {
         font-size: 16px;
-        padding: 7px 10px;
     }
     .alphabet {
         width: 80%;
@@ -393,4 +414,36 @@ footer p:last-child {
     body {
         padding-top: 155px;
     }
+}
+.coin-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 40px;
+}
+
+.coin-card {
+    text-align: center;
+    width: 120px;
+    position: relative;
+}
+
+.coin-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.coin-card:hover img {
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0px 10px rgba(200, 200, 200, 0.5), 0 0 20px rgba(195, 195, 195, 0.8);
+    transition: 0.2s;
+}
+.grid-layout a {
+    text-decoration: none;
 }
