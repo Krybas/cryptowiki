@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #1a1a1a;
     color: white;
-    padding-top: 90px;
+    padding-top: 110px;
     margin: 0;
     scroll-behavior: smooth;
 }
@@ -13,7 +13,6 @@ main {
 
 .navbar {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     position: fixed;
     top: 0;
@@ -35,7 +34,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
-    flex-grow: 2;
+    flex-grow: 1;
 }
 
 nav a, .alphabet a {
@@ -106,7 +105,7 @@ nav a:hover, a.active, .alphabet a:hover {
     margin: 10px 0;
 }
 
-.card a {
+.card a, form input[type="reset"] {
     display: inline-block;
     margin: 10px 15px;
     padding: 10px 20px;
@@ -179,8 +178,8 @@ footer p:last-child {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    gap: 10px;
+    margin: auto;
+    gap: 7px;
     width: 65%;
 }
 
@@ -188,14 +187,7 @@ footer p:last-child {
     background-color: #1d8da1 !important;
     transition: ease 1s;
     scroll-margin-top: 130px;
-}
-
-.alphabet h2 {
-    color: #c1e3dc;
-    font-size: 30px;
-    margin-left: 17%;
-    margin-right: 17%;
-    text-align: center;
+    padding: 10px 25px;
 }
 
 .main-section, .sidebar {
@@ -221,24 +213,28 @@ footer p:last-child {
 }
 
 .split-section #smaller {
+    display: flex;
+    justify-content: center;
     width: 30%;
     margin-right: 20px;
 }
 
 .pic {
     border-radius: 10px;
-    max-width: 95%;
-    height: 100%;
+    max-width: 75%;
     margin: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
 }
 
-.main-section h2,.content h2, .sidebar h2 {
+.main-section h2,.content h2, .sidebar h2, #title {
     color: #c1e3dc;
     font-size: 30px;
     margin: 10px 0;
 }
 
+#title {
+    text-align: center;
+}
 .main-section span, h3{
     color: #76ebd4;
     font-size: 20px;
@@ -309,118 +305,12 @@ footer p:last-child {
     align-items: start;
 }
 
-@media (max-width: 1024px) {
-
-    .split-section {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .split-section #bigger, 
-    .split-section #smaller {
-        width: 100%;
-        padding-right: 0;
-    }
-
-    .split-section #smaller {
-        justify-content: center;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .main-section {
-        margin: 20px 10px;
-        scroll-margin-top: 130px;
-    }
-
-    .main-section h2 {
-        font-size: 24px;
-    }
-
-    .main-section p {
-        font-size: 16px;
-    }
-
-    .pic {
-        max-width: 85%;
-    }
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .navbar h1 {
-        font-size: 28px;
-        padding-left: 20px;
-    }
-
-    nav {
-        width: 100%;
-        justify-content: center;
-    }
-
-    nav a {
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-    body {
-        padding-top: 115px; 
-    }
-    .grid-layout {
-        grid-template-columns: 1fr;
-    }
-}
-@media (max-width: 624px) {
-    body {
-        padding-top: 175px;
-    }
-    nav {
-        margin-bottom: 10px;
-    }
-    .main-section {
-        scroll-margin-top: 195px;
-    }
-    .sidebar .card {
-        margin: 0;
-        min-width: 0;
-    }
-    .sidebar .card a {
-        margin: 0;
-    }
-}
-@media (max-width: 480px) {
-    .navbar h1 {
-        font-size: 24px;
-        padding-left: 15px;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 8px 10px;
-    }
-    .main-section {
-        scroll-margin-top: 170px;
-    }
-    .content h2 {
-        font-size: 24px;
-    }
-    .alphabet a {
-        font-size: 16px;
-    }
-    .alphabet {
-        width: 80%;
-    }
-    body {
-        padding-top: 155px;
-    }
-}
 .coin-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    padding: 40px;
+    padding: 20px 0;
 }
 
 .coin-card {
@@ -446,4 +336,179 @@ footer p:last-child {
 }
 .grid-layout a {
     text-decoration: none;
+}
+
+form {
+    width: 90%;
+    padding: 10px;
+}
+
+label {
+    color: #c1e3dc;
+    font-size: 18px;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 18px;
+    border: 2px solid #243b55;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    color: #c1e3dc;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    transition: 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: #14b8d5;
+    box-shadow: 0px 4px 15px rgba(20, 184, 213, 0.5);
+    outline: none;
+}
+form input[type="text"] {
+    width: 65%;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+    width: 90%;
+}
+
+form input[type="reset"] {
+    border: none;
+    width:90%;
+}
+@media (max-width: 1024px) {
+
+    .split-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .split-section #bigger, 
+    .split-section #smaller {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .split-section #smaller {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .navbar h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    .main-section {
+        scroll-margin-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-section {
+        margin: 20px 10px;
+        scroll-margin-top: 110px;
+    }
+
+    .main-section h2 {
+        font-size: 24px;
+    }
+
+    .main-section p {
+        font-size: 16px;
+    }
+
+    .pic {
+        max-width: 85%;
+    }
+    nav {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .navbar h1 {
+        font-size: 28px;
+        padding-left: 20px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .navbar h1 {
+        font-size: 28px;
+        padding-left: 20px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    body {
+        padding-top: 130px; 
+    }
+    .grid-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 624px) {
+
+    .main-section {
+        scroll-margin-top: 195px;
+    }
+    .sidebar .card {
+        margin: 0;
+        min-width: 0;
+    }
+    .sidebar .card a {
+        margin: 0;
+    }
+    body {
+        padding-top: 175px;
+    }
+}
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar h1 {
+        font-size: 24px;
+        padding-left: 15px;
+    }
+    nav {
+        margin-top: 0;
+    }
+    nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    .main-section {
+        scroll-margin-top: 170px;
+    }
+    .content h2 {
+        font-size: 24px;
+    }
+    .alphabet a {
+        font-size: 16px;
+    }
+    .alphabet {
+        width: 80%;
+    }
+    body {
+        padding-top: 200px;
+    }
 }
