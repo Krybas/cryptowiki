@@ -7,25 +7,28 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <h1>CryptoWiki</h1>
-            <nav>
-                <a href="index.html" class="active">Home</a>
-                <a href="cryptocurrency.html">Cryptocurrency</a>
-                <a href="blockchain.html">Blockchain</a>
-                <a href="glossary.html">Glossary</a>
-                <a href="contact.html">Contact us</a>
-            </nav>
+    <aside>
+        <div class="navbar-container" id="navbar">
+            <div class="navbar">
+                <h1>CryptoWiki</h1>
+                <nav>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="cryptocurrency.html">Cryptocurrency</a>
+                    <a href="blockchain.html">Blockchain</a>
+                    <a href="glossary.html">Glossary</a>
+                    <a href="contact.html">Contact us</a>
+                </nav>
+            </div>
         </div>
-    </header>
+        <button id="toggle-btn"><img src="Pic/arrow-left.png" alt="arrow"></button>
+    </aside>
     <main>
-        <div class="content">
+        <header class="content">
             <h2>Welcome to CryptoWiki</h2>
             <p>Your go-to source for cryptocurrency and blockchain information.</p>
-        </div>
+        </header>
         <hr>
-        <div class="card-container">
+        <section class="card-container">
             <div class="card">
                 <h3>Cryptocurrency</h3>
                 <img src="./Pic/index/cryptocurrency.png" alt="Cryptocurrency">
@@ -44,7 +47,7 @@
                 <p>Familiarize yourself with common cryptocurrency and blockchain terminology to better understand the key concepts and technologies driving the digital currency ecosystem.</p>
                 <a href="glossary.html">Browse Glossary</a>
             </div>
-        </div>
+        </section>
     </main>
     <hr>
     <footer>
@@ -58,5 +61,6 @@
             <p>&copy; 2024 CryptoWiki</p>
         </div>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>

@@ -2,46 +2,95 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #1a1a1a;
     color: white;
-    padding-top: 110px;
     margin: 0;
     scroll-behavior: smooth;
 }
 
-main {
+main, footer {
     z-index: 0;
+    margin-left: 270px;
+    transition: 0.3s ease;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
+#toggle-btn {
+    position: fixed;
+    top: 10px;
+    left: 260px;
+    padding: 0;
+    background-color: #243b55;
+    width: 55px;
+    height: 55px;
+    color: #c1e3dc;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+#toggle-btn img {
+    width: 35px;
+}
+#toggle-btn:hover {
+    background-color: #141e30;
+}
+
+.navbar-container {
     position: fixed;
     top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
     background: linear-gradient(135deg, #141e30, #243b55);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
-    width: 100%;
+    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.8);
+    transition: 0.3s ease;
     z-index: 1;
 }
+
+.navbar-container.close {
+    left: -250px;
+}
+#toggle-btn.close {
+    left: 10px;
+}
+#toggle-btn.close img {
+    transform: rotate(180deg);
+} 
+
+main.close, footer.close {
+    margin-left: 20px;
+    transition: 0.3s ease;
+}
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    padding-top: 20px;
+}
+
 
 .navbar h1 {
     font-size: 38px;
     font-weight: bold;
     color: #c1e3dc;
-    margin-right: auto;
-    padding-left: 30px;
+    padding-left: 20px;
+    margin-bottom: 20px;
 }
 
 nav {
     display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-    flex-grow: 1;
+    flex-direction: column;
+    width: 100%;
 }
 
 nav a, .alphabet a {
-    text-transform: uppercase;
+    display: block;
     padding: 12px 20px;
     font-size: 18px;
     letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: left;
     color: #c1e3dc;
     text-decoration: none;
     transition: 0.3s;
@@ -51,13 +100,12 @@ nav a, .alphabet a {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-nav a:hover, a.active, .alphabet a:hover {
+nav a:hover, nav a.active, .alphabet a:hover {
     color: #c1e3dc;
     background: #063e53;
     border: 2px solid #b4e9fe;
     text-shadow: 0 0 10px #14b8d5;
     box-shadow: 0px 0px 15px #0f2e28, 0px 0px 25px rgba(176, 216, 223, 0.5);
-    cursor: pointer;
 }
 
 .content {
@@ -87,7 +135,7 @@ nav a:hover, a.active, .alphabet a:hover {
     border-radius: 10px;
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
     padding: 5px 15px;
-    width: 300px;
+    max-width: 300px;
     text-align: center;
     transition: 0.3s;
 }
@@ -100,7 +148,7 @@ nav a:hover, a.active, .alphabet a:hover {
     font-size: 24px;
 }
 
-.card p, .content p {
+.card p, .content p, main- {
     color: #b4e9fe;
     margin: 10px 0;
 }
@@ -235,7 +283,7 @@ footer p:last-child {
 #title {
     text-align: center;
 }
-.main-section span, h3{
+.main-section span, h3 {
     color: #76ebd4;
     font-size: 20px;
 }
@@ -297,14 +345,6 @@ footer p:last-child {
     min-width: 150px;
 }
 
-.grid-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-    margin: 40px 20px;
-    align-items: start;
-}
-
 .coin-section {
     display: flex;
     flex-wrap: wrap;
@@ -333,9 +373,6 @@ footer p:last-child {
     transform: scale(1.2);
     box-shadow: 0 0px 10px rgba(200, 200, 200, 0.5), 0 0 20px rgba(195, 195, 195, 0.8);
     transition: 0.2s;
-}
-.grid-layout a {
-    text-decoration: none;
 }
 
 form {
@@ -383,6 +420,7 @@ form input[type="reset"] {
     border: none;
     width:90%;
 }
+
 @media (max-width: 1024px) {
 
     .split-section {
@@ -400,74 +438,81 @@ form input[type="reset"] {
         justify-content: center;
         margin-top: 20px;
     }
-    
-    .navbar h1 {
-        font-size: 28px;
-    }
-
-    nav a {
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-    .main-section {
-        scroll-margin-top: 80px;
-    }
 }
 
 @media (max-width: 768px) {
-    .main-section {
-        margin: 20px 10px;
-        scroll-margin-top: 110px;
+    .navbar-container {
+        position: fixed;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
     }
 
-    .main-section h2 {
-        font-size: 24px;
+    .navbar {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
     }
 
-    .main-section p {
+    .navbar h1 {
+        font-size: 30px;
+        margin: 2px 0;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    nav a {
+        padding: 8px 10px;
         font-size: 16px;
     }
 
-    .pic {
-        max-width: 85%;
+    main {
+        margin-left: 20px;
+        margin-top: 150px;
     }
-    nav {
-        margin-bottom: 10px;
+    footer {
+        margin-left: 0px;
+    }
+
+    #toggle-btn {
+        transform: rotate(270deg);
+        left: 10px;
+        top: 150px;
+    }
+    .navbar-container.closeTablet {
+        transform: translateY(0);
+        top: -170px;
+    }
+    #toggle-btn.closeTablet {
+        transform: rotate(90deg);
+        top: 10px;
+    }
+    main.closeTablet {
         margin-top: 10px;
     }
-    .navbar h1 {
-        font-size: 28px;
-        padding-left: 20px;
-    }
-
-    nav a {
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-
-    .navbar h1 {
-        font-size: 28px;
-        padding-left: 20px;
-    }
-
-    nav a {
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-    body {
-        padding-top: 130px; 
-    }
-    .grid-layout {
-        grid-template-columns: 1fr 1fr;
-    }
-    .grid-layout {
-        grid-template-columns: 1fr;
-    }
 }
-@media (max-width: 624px) {
 
+@media (max-width: 624px) {
     .main-section {
-        scroll-margin-top: 195px;
+        margin-right: 7px;
+    }
+    .content {
+        margin-right: 7px;
+        width: 100%;
+        margin-left: 50px;
     }
     .sidebar .card {
         margin: 0;
@@ -476,28 +521,51 @@ form input[type="reset"] {
     .sidebar .card a {
         margin: 0;
     }
-    body {
-        padding-top: 175px;
-    }
-}
-@media (max-width: 480px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
     .navbar h1 {
         font-size: 24px;
-        padding-left: 15px;
+        padding-left: 5px;
     }
-    nav {
-        margin-top: 0;
+}
+@media (max-width: 426px) {
+    main {
+        margin-top: 100px;
     }
+    main.closeTablet {
+        margin-top: 340px;
+    }
+    .navbar-container {
+        position: fixed;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     nav a {
-        font-size: 14px;
-        padding: 8px 10px;
+        display: none;
     }
-    .main-section {
-        scroll-margin-top: 170px;
+
+    .navbar-container.closeTablet nav a {
+        display: block;
+        width: 100%;;
+    }
+
+    .navbar h1 {
+        font-size: 26px;
+        margin: 5px 0;
+        text-align: center;
+    }
+    .navbar-container.closeTablet {
+        top: 0;
+    }
+    #toggle-btn.closeTablet {
+        top: 340px;
+    }
+    #toggle-btn {
+
+        left: 10px;
+        top: 100px;
     }
     .content h2 {
         font-size: 24px;
@@ -507,8 +575,5 @@ form input[type="reset"] {
     }
     .alphabet {
         width: 80%;
-    }
-    body {
-        padding-top: 200px;
     }
 }

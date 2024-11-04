@@ -7,19 +7,27 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <h1>CryptoWiki</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="cryptocurrency.html">Cryptocurrency</a>
-                <a href="blockchain.html">Blockchain</a>
-                <a href="glossary.html">Glossary</a>
-                <a href="contact.html"  class="active">Contact us</a>
-            </nav>
+    <aside>
+        <div class="navbar-container" id="navbar">
+            <div class="navbar">
+                <h1>CryptoWiki</h1>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="cryptocurrency.html">Cryptocurrency</a>
+                    <a href="blockchain.html">Blockchain</a>
+                    <a href="glossary.html">Glossary</a>
+                    <a href="contact.html"  class="active">Contact us</a>
+                </nav>
+            </div>
         </div>
-    </header>
+        <button id="toggle-btn"><img src="Pic/arrow-left.png" alt="arrow"></button>
+    </aside>
     <main>
+        <header class="content">
+            <h2>Contact Us</h2>
+            <p>Here you can find the contact form to reach out to us. I'm are always excited to hear from users!</p>
+        </header>
+        <hr>
         <div class="main-section split-section">
             <div id="bigger">
                 <h2>Contact Us</h2>
@@ -44,6 +52,7 @@
                 </form>
             </div>
         </div>
+        <hr>
     </main>
     <footer>
         <div class="footer-content">
@@ -56,5 +65,6 @@
             <p>&copy; 2024 CryptoWiki</p>
         </div>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>

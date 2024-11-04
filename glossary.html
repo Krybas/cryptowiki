@@ -7,23 +7,26 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <h1>CryptoWiki</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="cryptocurrency.html">Cryptocurrency</a>
-                <a href="blockchain.html">Blockchain</a>
-                <a href="glossary.html" class="active">Glossary</a>
-                <a href="contact.html">Contact us</a>
-            </nav>
+    <aside>
+        <div class="navbar-container" id="navbar">
+            <div class="navbar">
+                <h1>CryptoWiki</h1>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="cryptocurrency.html">Cryptocurrency</a>
+                    <a href="blockchain.html">Blockchain</a>
+                    <a href="glossary.html" class="active">Glossary</a>
+                    <a href="contact.html">Contact us</a>
+                </nav>
+            </div>
         </div>
-    </header>
+        <button id="toggle-btn"><img src="Pic/arrow-left.png" alt="arrow"></button>
+    </aside>
     <main>
-        <div class="content">
+        <header class="content">
             <h2>Glossary</h2>
             <p>Expand your knowledge of cryptocurrency and blockchain technology by familiarizing yourself with the following terms and concepts.</p>
-        </div>
+        </header>
         <hr>
         <h2 id="title">Jump to a section by clicking a letter</h2>
         <div class="alphabet">
@@ -228,5 +231,6 @@
             <p>&copy; 2024 CryptoWiki</p>
         </div>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
