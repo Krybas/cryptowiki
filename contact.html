@@ -5,66 +5,106 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <aside>
-        <div class="navbar-container" id="navbar">
-            <div class="navbar">
-                <h1>CryptoWiki</h1>
-                <nav>
-                    <a href="index.html">Home</a>
-                    <a href="cryptocurrency.html">Cryptocurrency</a>
-                    <a href="blockchain.html">Blockchain</a>
-                    <a href="glossary.html">Glossary</a>
-                    <a href="contact.html"  class="active">Contact us</a>
-                </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">CryptoWiki</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cryptocurrency.html">Cryptocurrencies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blockchain.html">Blockchain</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glossary.html">Glossary</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Settings</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Dark mode</a></li>
+                            <li><a class="dropdown-item" href="#">Light mode</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Text size</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-        <button id="toggle-btn"><img src="Pic/arrow-left.png" alt="arrow"></button>
-    </aside>
-    <main>
-        <header class="content">
+    </nav>
+    <main class="content">
+        <header class="content text-center mt-5 pt-3 w-50 mx-auto">
             <h2>Contact Us</h2>
             <p>Here you can find the contact form to reach out to us. I'm are always excited to hear from users!</p>
         </header>
         <hr>
-        <div class="main-section split-section">
-            <div id="bigger">
-                <h2>Contact Us</h2>
-                <p>Have questions or comments? I'm are always excited to hear from users! Whether you have feedback about the website, inquiries about the content, or suggestions for improvements. Please feel free to reach out using the form provided below, and I'll get back to you as soon as possible.</p>
-                <img src="./Pic/contact/question.png" alt="question" class="pic">
-            </div>
-            <div id="smaller">
-                <form>
-                    <label for="fname">Enter first name:</label><br>
-                    <input type="text" id="fname" placeholder="First name" required autofocus><br><br>
-
-                    <label for="lname">Enter last name:</label><br>
-                    <input type="text" id="lname" placeholder="Last name" required><br><br>
-
-                    <label for="email">Enter email:</label><br>
-                    <input type="email" id="email" placeholder="Email" required><br><br>
-
-                    <label for="message">Enter message:</label><br>
-                    <textarea id="message" placeholder="Message" required></textarea><br><br>
-
-                    <input type="reset" value="Submit">
-                </form>
+        <div class="main-section large shadow">
+            <div class="row">
+                <div class="col-14 col-md-7">
+                    <h3>Contact Us</h3>
+                    <p>Have questions or comments? I'm are always excited to hear from users! Whether you have feedback about the website, inquiries about the content, or suggestions for improvements. Please feel free to reach out using the form provided below, and I'll get back to you as soon as possible.</p>
+                    <img src="./Pic/contact/question.png" alt="question" class="pic">
+                </div>
+                <div class="col-14 col-md-5">
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="fname" class="form-label">Enter first name:</label>
+                            <input type="text" class="form-control" id="fname" placeholder="First name" required autofocus>
+                            <div class="invalid-feedback">
+                                Please enter your first name.
+                            </div>
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="lname" class="form-label">Enter last name:</label>
+                            <input type="text" class="form-control" id="lname" placeholder="Last name" required>
+                            <div class="invalid-feedback">
+                                Please enter your last name.
+                            </div>
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Enter email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Enter message:</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Message" required></textarea>
+                            <div class="invalid-feedback">
+                                Please enter a message.
+                            </div>
+                        </div>
+                    
+                        <div>
+                            <button type="reset" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         <hr>
     </main>
-    <footer>
-        <div class="footer-content">
-            <p>Connect with me on social media</p>
-            <div class="social-media-icons">
-                <a href="https://www.instagram.com/arnas.silaikis?utmsource=gr&igsh=bW16Z29rajFINHVx" target="_blank"><img src="./Pic/footer/instagram.png" alt="instagram"></a>
-                <a href="https://www.facebook.com/profile.php?id=100007990363206" target="_blank"><img src="./Pic/footer/facebook.png" alt="facebook"></a>
-                <a href="https://github.com/Krybas" target="_blank"><img src="./Pic/footer/github-sign.png" alt="github"></a>
-            </div>
-            <p>&copy; 2024 CryptoWiki</p>
+    <footer class="text-center pt-3 pb-1">
+        <p>Connect with me on social media</p>
+        <div class="social-media-icons">
+            <a href="https://www.instagram.com/arnas.silaikis" target="_blank">
+                <img src="./Pic/footer/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100007990363206" target="_blank">
+                <img src="./Pic/footer/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://github.com/Krybas" target="_blank">
+                <img src="./Pic/footer/github-sign.png" alt="GitHub">
+            </a>
         </div>
+        <p>&copy; 2024 CryptoWiki</p>
     </footer>
     <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

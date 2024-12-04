@@ -1,46 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>CryptoWiki</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <aside>
-        <div class="navbar-container" id="navbar">
-            <div class="navbar">
-                <h1>CryptoWiki</h1>
-                <nav>
-                    <a href="index.html">Home</a>
-                    <a href="cryptocurrency.html" class="active">Cryptocurrency</a>
-                    <a href="blockchain.html">Blockchain</a>
-                    <a href="glossary.html">Glossary</a>
-                    <a href="contact.html">Contact us</a>
-                </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">CryptoWiki</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cryptocurrency.html">Cryptocurrencies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blockchain.html">Blockchain</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glossary.html">Glossary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Settings</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Dark mode</a></li>
+                            <li><a class="dropdown-item" href="#">Light mode</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Text size</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-        <button id="toggle-btn"><img src="Pic/arrow-left.png" alt="arrow"></button>
-    </aside>
-    <main>
-        <header class="content">
+    </nav>
+
+    <main class="container">
+        <header class="content text-center mt-5 pt-3 w-50 mx-auto">
             <h2>Cryptocurrency</h2>
             <p>Discover the latest digital currencies, explore emerging market trends, and stay informed about cutting-edge innovations shaping the future of cryptocurrency and blockchain technology.</p>
         </header>
         <hr>
-        <section class="main-section">
-            <h2>What is cryptocurrency?</h2>
-            <p>A cryptocurrency is a digital or virtual currency secured by cryptography, which makes it nearly impossible to counterfeit or double-spend. Most cryptocurrencies exist on decentralized networks using blockchain technology a distributed ledger enforced by a disparate network of computers.</p>
-            <ul class="key-takeaways">
-                <h2>Key features of cryptocurrency</h2>
+        <section class="main-section my-3 large shadow">
+            <h3>What is cryptocurrency?</h3>
+            <p>A cryptocurrency is a digital or virtual currency secured by cryptography, which makes it nearly impossible to counterfeit or double-spend. Most cryptocurrencies exist on decentralized networks using blockchain technology, a distributed ledger enforced by a disparate network of computers.</p>
+            <ul class="key-takeaways list-unstyled">
+                <h4>Key features of cryptocurrency</h4>
                 <li>Cryptocurrency is a decentralized digital asset, not controlled by governments.</li>
-                <li>Advantages: </li>
-                <ul id="advantages">
+                <li>Advantages:</li>
+                <ul class="ps-3">
                     <li>Cheaper and faster money transfers.</li>
-                    <li>Decentralized, reducing risk of single point failures.</li>
+                    <li>Decentralized, reducing the risk of single-point failures.</li>
                 </ul>
-                <li>Disadvantages: </li>
-                <ul id="disadvantages">
+                <li>Disadvantages:</li>
+                <ul class="ps-3">
                     <li>Price volatility.</li>
                     <li>High energy consumption for mining.</li>
                     <li>Association with criminal activities.</li>
@@ -48,123 +60,163 @@
                 <li>Experts predict blockchain could disrupt industries like finance and law.</li>
             </ul>
         </section>
-        <section class="main-section">
-            <h2>About most popular cryptocurrencies</h2>
+        <section class="main-section my-3 large shadow">
+            <h3>About most popular cryptocurrencies</h3>
             <span>Bitcoin</span><p>Bitcoin is the first and most well-known cryptocurrency, created in 2009 by an unknown person or group of people using the name Satoshi Nakamoto. Since then, thousands of alternative cryptocurrencies have been created, including Ethereum, Ripple, and Litecoin.</p>
+
             <span>Ethereum</span><p>Ethereum is a decentralized platform that enables developers to build and deploy smart contracts, which are self-executing contracts with the terms of the agreement directly written into code. The native cryptocurrency of the Ethereum network is called Ether (ETH).</p>
+
             <span>Binance Coin</span><p>Binance Coin is a cryptocurrency used to pay for fees on the Binance cryptocurrency exchange. The coin was launched in 2017 and is used to facilitate transactions on the Binance platform, as well as to participate in token sales hosted on the Binance Launchpad.</p>
+
             <span>Cardano</span><p>Cardano is a blockchain platform that aims to provide a more secure and scalable infrastructure for the development of decentralized applications and smart contracts. The native cryptocurrency of the Cardano network is called ADA.</p>
+
             <span>Solana</span><p>Solana is a high-performance blockchain platform that aims to provide fast, secure, and scalable infrastructure for decentralized applications and crypto-currencies. The native cryptocurrency of the Solana network is called SOL.</p>
+
             <span>Ripple XRP</span><p>Ripple is a digital payment protocol that enables fast, low-cost cross-border transactions. The native cryptocurrency of the Ripple network is called XRP.</p>
         </section>
-        <div class="main-section">
-            <h2>Cryptocurrency list</h2>
-            <section class="coin-section">
-                <a href="https://coinmarketcap.com/currencies/bitcoin/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/Bitcoin.png" alt="Bitcoin">
-                        <h3>Bitcoin</h3>
-                    </div>
-                </a>
-                <a href="https://coinmarketcap.com/currencies/ethereum/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/Ethereum.png" alt="Ethereum">
-                        <h3>Ethereum</h3>
-                    </div>
-                </a>
-                <a href="https://coinmarketcap.com/currencies/bnb/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/Binance.png" alt="Binance Coin">
-                        <h3>Binance Coin</h3>
-                    </div>
-                </a>
-                <a href="https://coinmarketcap.com/currencies/cardano/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/cardano.png" alt="Cardano">
-                        <h3>Cardano</h3>
-                    </div>
-                </a>
-                <a href="https://coinmarketcap.com/currencies/solana/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/Solana.png" alt="Solana">
-                        <h3>Solana</h3>
-                    </div>
-                </a>
-                <a href="https://coinmarketcap.com/currencies/xrp/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/xrp.png" alt="XRP">
-                        <h3>Ripple XRP</h3>
-                    </div>
-                </a>
-                <a href="https://coinmarketcap.com/currencies/dogecoin/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/DogeCoin.png" alt="dogecoin">
-                        <h3>Dogecoin</h3>
-                    </div>
-                </a>
-                <a href="https://coinmarketcap.com/currencies/toncoin/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/Toncoin.png" alt="Toncoin">
-                        <h3>Toncoin</h3>
-                    </div>
-                </a>
-                <a href="https://coinmarketcap.com/currencies/tron/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/tron.png" alt="Tron">
-                        <h3>Tron</h3>
-                    </div>
-                </a>
-                <a href="https://coinmarketcap.com/currencies/pepe/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/pepe.png" alt="pepe">
-                        <h3>Pepe</h3>
-                    </div>
-                </a>
-                <a href="https://coinmarketcap.com/currencies/ponke/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/ponke.jpg" alt="ponke">
-                        <h3>Ponke</h3>
-                    </div>
-                </a>
-                <a href="https://coinmarketcap.com/currencies/chainlink/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/chainlink.png" alt="chainlink">
-                        <h3>Chainlink</h3>
-                    </div>
-                </a>
-                <a href="https://coinmarketcap.com/currencies/polkadot/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/polkadot.png" alt="polkadot">
-                        <h3>Polkadot</h3>
-                    </div>
-                </a>
-                <a href="https://coinmarketcap.com/currencies/stellar/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/stellar.png" alt="stellar">
-                        <h3>Stellar</h3>
-                    </div>
-                </a>
-                <a href="https://coinmarketcap.com/currencies/polygon/" target="_blank">
-                    <div class="coin-card">
-                        <img src="./Pic/cryptocurrency/polygon.png" alt="polygon">
-                        <h3>Polygon</h3>
-                    </div>
-                </a>
-            </section> 
-        </div>
+        <sectopm class="my-5">
+            <h3 class="mb-4">Cryptocurrency list</h3>
+            <div class="coin-section row g-3">
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/bitcoin/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/Bitcoin.png" alt="Bitcoin">
+                            <h4>Bitcoin</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/ethereum/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/Ethereum.png" alt="Ethereum">
+                            <h4>Ethereum</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/bnb/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/Binance.png" alt="Binance Coin">
+                            <h4>Binance Coin</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/cardano/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/cardano.png" alt="Cardano">
+                            <h4>Cardano</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/solana/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/Solana.png" alt="Solana">
+                            <h4>Solana</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/xrp/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/xrp.png" alt="XRP">
+                            <h4>Ripple XRP</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/dogecoin/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/DogeCoin.png" alt="dogecoin">
+                            <h4>Dogecoin</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/toncoin/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/Toncoin.png" alt="Toncoin">
+                            <h4>Toncoin</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/tron/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/tron.png" alt="Tron">
+                            <h4>Tron</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/pepe/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/pepe.png" alt="pepe">
+                            <h4>Pepe</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/ponke/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/ponke.jpg" alt="ponke">
+                            <h4>Ponke</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/chainlink/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/chainlink.png" alt="chainlink">
+                            <h4>Chainlink</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/polkadot/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/polkadot.png" alt="polkadot">
+                            <h4>Polkadot</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/stellar/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/stellar.png" alt="stellar">
+                            <h4>Stellar</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-lg-2">
+                    <a href="https://coinmarketcap.com/currencies/polygon/" target="_blank" class="text-decoration-none">
+                        <div class="coin-card">
+                            <img src="./Pic/cryptocurrency/polygon.png" alt="polygon">
+                            <h4>Polygon</h4>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+        </section>
     </main>
     <hr>
-    <footer>
-        <div class="footer-content">
-            <p>Connect with me on social media</p>
-            <div class="social-media-icons">
-                <a href="https://www.instagram.com/arnas.silaikis?utmsource=gr&igsh=bW16Z29rajFINHVx" target="_blank"><img src="./Pic/footer/instagram.png" alt="instagram"></a>
-                <a href="https://www.facebook.com/profile.php?id=100007990363206" target="_blank"><img src="./Pic/footer/facebook.png" alt="facebook"></a>
-                <a href="https://github.com/Krybas" target="_blank"><img src="./Pic/footer/github-sign.png" alt="github"></a>
-            </div>
-            <p>&copy; 2024 CryptoWiki</p>
+    <footer class="text-center pt-3 pb-1">
+        <p>Connect with me on social media</p>
+        <div class="social-media-icons">
+            <a href="https://www.instagram.com/arnas.silaikis" target="_blank">
+                <img src="./Pic/footer/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100007990363206" target="_blank">
+                <img src="./Pic/footer/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://github.com/Krybas" target="_blank">
+                <img src="./Pic/footer/github-sign.png" alt="GitHub">
+            </a>
         </div>
+        <p>&copy; 2024 CryptoWiki</p>
     </footer>
     <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

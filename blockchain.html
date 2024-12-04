@@ -1,132 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>CryptoWiki</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <aside>
-        <div class="navbar-container" id="navbar">
-            <div class="navbar">
-                <h1>CryptoWiki</h1>
-                <nav>
-                    <a href="index.html">Home</a>
-                    <a href="cryptocurrency.html">Cryptocurrency</a>
-                    <a href="blockchain.html"  class="active">Blockchain</a>
-                    <a href="glossary.html">Glossary</a>
-                    <a href="contact.html">Contact us</a>
-                </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">CryptoWiki</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cryptocurrency.html">Cryptocurrencies</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blockchain.html">Blockchain</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glossary.html">Glossary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Settings</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Dark mode</a></li>
+                            <li><a class="dropdown-item" href="#">Light mode</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Text size</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-        <button id="toggle-btn"><img src="Pic/arrow-left.png" alt="arrow"></button>
-    </aside>
-    <main>
-        <header class="content">
+    </nav>
+    
+    <main class="container">
+        <header class="content text-center mt-5 pt-3 w-50 mx-auto">
             <h2>Blockchain</h2>
             <p>Understand the underlying technology that powers cryptocurrencies, such as blockchain, and its potential applications in areas like finance, security, and data management.</p>
         </header>
         <hr>
-        <section class="main-section split-section">
-            <div id="bigger">
-                <h2>Definition</h2>
-                <p><span>Blockchain. </span>It is a decentralized digital ledger that securely stores records across a network of computers in a way that is transparent, immutable, and resistant to tampering. Each "block" contains data, and blocks are linked in a chronological "chain."</p>
+        <section class="main-section large shadow">
+            <div class="row">
+                <div class="col-14 col-md-7">
+                    <h3>Definition</h3>
+                    <p><span>Blockchain. </span>It is a decentralized digital ledger that securely stores records across a network of computers in a way that is transparent, immutable, and resistant to tampering. Each "block" contains data, and blocks are linked in a chronological "chain."</p>
+                </div>
+                <div class="col-14 col-md-5">
+                    <img class="pic" src="./Pic/blockchain/block-definition.jpg" alt="blockchain-definition">
+                </div> 
             </div>
-            <div id="smaller">
-                <img class="pic" src="./Pic/blockchain/block-definition.jpg" alt="blockchain-definition">
-            </div> 
         </section>
-        <section class="main-section split-section">
-            <div id="smaller">
-                <img class="pic" src="./Pic/blockchain/What-is-it.png" alt="What is blockchain">
-            </div>
-            <div id="bigger">
-                <h2>What is blockchain?</h2>
-                <p>A blockchain is a distributed database or ledger shared across a computer network's nodes. They are best known for their crucial role in cryptocurrency systems, maintaining a secure and decentralized record of transactions, but they are not limited to cryptocurrency uses. Blockchains can be used to make data in any industry immutable—meaning it cannot be altered.</p>
-                <p>Since a block can't be changed, the only trust needed is at the point where a user or program enters data. This reduces the need for trusted third parties, such as auditors or other humans, who add costs and can make mistakes.</p>
-                <p>Since Bitcoin's introduction in 2009, blockchain uses have exploded via the creation of various cryptocurrencies, decentralized finance (DeFi) applications, non-fungible tokens (NFTs), and smart contracts.</p>
+        <section class="main-section large shadow">
+            <div class="row">
+                <div class="col-14 col-md-5">
+                    <img class="pic" src="./Pic/blockchain/What-is-it.png" alt="What is blockchain">
+                </div>
+                <div class="col-14 col-md-7">
+                    <h3>What is blockchain?</h3>
+                    <p>A blockchain is a distributed database or ledger shared across a computer network's nodes. They are best known for their crucial role in cryptocurrency systems, maintaining a secure and decentralized record of transactions, but they are not limited to cryptocurrency uses. Blockchains can be used to make data in any industry immutable—meaning it cannot be altered.</p>
+                    <p>Since a block can't be changed, the only trust needed is at the point where a user or program enters data. This reduces the need for trusted third parties, such as auditors or other humans, who add costs and can make mistakes.</p>
+                    <p>Since Bitcoin's introduction in 2009, blockchain uses have exploded via the creation of various cryptocurrencies, decentralized finance (DeFi) applications, non-fungible tokens (NFTs), and smart contracts.</p>
+                </div>
             </div>
             <ul class="key-takeaways">
-                <h2>Key Takeaways</h2>
+                <h4>Key Takeaways</h4>
                 <li>Blockchain is a type of shared database that differs from a typical database in the way it stores information; blockchains store data in blocks linked together via cryptography.</li>
                 <li>Different types of information can be stored on a blockchain, but the most common use has been as a transaction ledger.</li>
                 <li>In Bitcoin's case, the blockchain is decentralized, so no single person or group has control—instead, all users collectively retain control.</li>
                 <li>Decentralized blockchains are immutable, meaning that the data entered is irreversible. For Bitcoin, transactions are permanently recorded and viewable to anyone.</li>
             </ul>
         </section>
-        <section class="main-section split-section">
-            <div id="smaller">
-                <img class="pic" src="./Pic/blockchain/how-it-Works.jpg" alt="How_it_works">
-            </div>
-            <div id="bigger">
-                <h2>How does blockchain work?</h2>
-                <p>Blockchain technology is based on a distributed ledger system. When a transaction occurs, it is grouped together in a block with other transactions that have occurred in the same time frame. This block is then added to the chain of blocks that came before it, creating a chain of blocks, or a blockchain.</p>
-                <p>Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data. The hash of each block is used to link it to the previous block, creating a chain of blocks that cannot be altered without changing all subsequent blocks.</p>
-                <p>Once a block is added to the blockchain, it is considered to be permanent and cannot be altered. This makes blockchain technology secure and resistant to tampering.</p>
+        <section class="main-section large shadow">
+            <div class="row">
+                <div class="col-14 col-md-5">
+                    <img class="pic" src="./Pic/blockchain/how-it-Works.jpg" alt="How_it_works">
+                </div>
+                <div class="col-14 col-md-7">
+                    <h3>How does blockchain work?</h3>
+                    <p>Blockchain technology is based on a distributed ledger system. When a transaction occurs, it is grouped together in a block with other transactions that have occurred in the same time frame. This block is then added to the chain of blocks that came before it, creating a chain of blocks, or a blockchain.</p>
+                    <p>Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data. The hash of each block is used to link it to the previous block, creating a chain of blocks that cannot be altered without changing all subsequent blocks.</p>
+                    <p>Once a block is added to the blockchain, it is considered to be permanent and cannot be altered. This makes blockchain technology secure and resistant to tampering.</p>
+                </div>
             </div>
         </section>
-        <section class="main-section">
-            <h2>Blockchain decentralized</h2>
+        <section class="main-section large shadow">
+            <h3>Blockchain decentralized</h3>
             <p>One of the key features of blockchain technology is it's decentralized nature. In a decentralized blockchain, there is no central authority that controls the network. Instead, the network is made up of a group of nodes that work together to maintain the blockchain.</p>
             <p>Each node in the network has a copy of the blockchain, and all nodes work together to validate and record transactions. This decentralized nature makes blockchain technology secure and resistant to censorship.</p>
             <p>Decentralized blockchains are also transparent, as all transactions are recorded on the blockchain and can be viewed by anyone. This transparency helps to build trust in the network and ensures that transactions are secure and verifiable.</p>
         </section>
-        <section class="main-section split-section">
-            <div id="bigger">
-                <h2>Is blockchain secure?</h2>
-                <p>Blockchain technology is considered to be secure due to its decentralized and immutable nature. Because the blockchain is decentralized, there is no single point of failure that can be exploited by hackers. Instead, the network is made up of a group of nodes that work together to maintain the blockchain.</p>
-                <p>Additionally, once a block is added to the blockchain, it is considered to be permanent and cannot be altered. This makes blockchain technology resistant to tampering and ensures that transactions are secure and verifiable.</p>
-                <p>While blockchain technology is considered to be secure, it is not immune to all types of attacks. For example, a 51% attack, where a single entity controls more than 50% of the network's computing power, could potentially compromise the security of the blockchain.</p>
-            </div>
-            <div id="smaller">
-                <img class="pic" src="./Pic/blockchain/cybersecurity.webp" alt="blockchain-security">
+        <section class="main-section large shadow">
+            <div class="row">
+                <div class="col-14 col-md-7">
+                    <h3>Is blockchain secure?</h3>
+                    <p>Blockchain technology is considered to be secure due to its decentralized and immutable nature. Because the blockchain is decentralized, there is no single point of failure that can be exploited by hackers. Instead, the network is made up of a group of nodes that work together to maintain the blockchain.</p>
+                    <p>Additionally, once a block is added to the blockchain, it is considered to be permanent and cannot be altered. This makes blockchain technology resistant to tampering and ensures that transactions are secure and verifiable.</p>
+                    <p>While blockchain technology is considered to be secure, it is not immune to all types of attacks. For example, a 51% attack, where a single entity controls more than 50% of the network's computing power, could potentially compromise the security of the blockchain.</p>
+                </div>
+                <div class="col-14 col-md-5">
+                    <img class="pic" src="./Pic/blockchain/cybersecurity.webp" alt="blockchain-security">
+                </div>
             </div>
         </section>
-        <section class="main-section">
-            <h2>Blockchain vs Banks</h2>
+        <section class="main-section large shadow">
+            <h3>Blockchain vs Banks</h3>
             <p>Blockchains have been heralded as a disruptive force in the finance sector, especially with the functions of payments and banking. However, banks and decentralized blockchains are vastly different.</p>
             <p>To see how a bank differs from blockchain, let's compare the banking system to Bitcoin's blockchain implementation.</p>
-            <h2>How Are Blockchains Used?</h2>
+            <h4>How Are Blockchains Used?</h4>
             <p>As we now know, blocks on Bitcoin's blockchain store transactional data. Today, tens of thousands of other cryptocurrencies run on a blockchain. But it turns out that blockchain can be a reliable way to store other types of data as well.</p>
             <p>Some companies experimenting with blockchain include Walmart, Pfizer, AIG, Siemens, and Unilever, among others. For example, IBM has created its Food Trust blockchain to trace the journey that food products take to get to their locations.</p>
+            <hr>
             <div class="quote">
                 <q><i>Using blockchain allows brands to track a food product's route from its origin, through each stop it makes, to delivery. Not only that, but these companies can also now see everything else it may have come in contact with, allowing the identification of the problem to occur far sooner—potentially saving lives.</i></q>
             </div>
+            <hr>
             <p>This is one example of blockchain in practice, but many other forms of blockchain implementation exist or are being experimented with.</p>
         </section>
-        <section class="main-section">
-            <h2>Benefits of Blockchains</h2>
-            <h3>Accuracy of the Chain</h3>
+        <section class="main-section large shadow">
+            <h3>Benefits of Blockchains</h3>
+            <h4>Accuracy of the Chain</h4>
             <p>Transactions on the blockchain network are approved by thousands of computers and devices. This removes almost all people from the verification process, resulting in less human error and an accurate record of information. Even if a computer on the network were to make a computational mistake, the error would only be made to one copy of the blockchain and not be accepted by the rest of the network.</p>
-            <h3>Cost Reductions</h3>
+            <h4>Cost Reductions</h4>
             <p>Typically, consumers pay a bank to verify a transaction or a notary to sign a document. Blockchain eliminates the need for third-party verification—and, with it, their associated costs. For example, business owners incur a small fee when they accept credit card payments because banks and payment-processing companies have to process those transactions. Bitcoin, on the other hand, does not have a central authority and has limited transaction fees.</p>
-            <h3>Decentralization</h3>
+            <h4>Decentralization</h4>
             <p>Blockchain does not store any of its information in a central location. Instead, the blockchain is copied and spread across a network of computers. Whenever a new block is added to the blockchain, every computer on the network updates its blockchain to reflect the change.</p>
-            <h3>Efficient Transactions</h3>
+            <h4>Efficient Transactions</h4>
             <p>Transactions placed through a central authority can take up to a few days to settle. A blockchain runs 24/7, allowing transactions to be completed securely in minutes, especially for cross-border trades.</p>
-            <h3>Private Transactions</h3>
+            <h4>Private Transactions</h4>
             <p>Blockchain networks operate as public databases, but users are pseudonymous. Users can access transaction details without identifying the individuals behind them unless the information is exposed.</p>
-            <h3>Secure Transactions</h3>
+            <h4>Secure Transactions</h4>
             <p>Once a transaction is recorded, it is verified by the blockchain network. Each block contains a unique hash, making it impossible to alter once confirmed by the network.</p>
-            <h3>Transparency</h3>
+            <h4>Transparency</h4>
             <p>Many blockchains are open source, allowing anyone to review the code. This ensures security and allows for decentralized improvements, where users vote on updates. However, private blockchains may restrict access.</p>
-            <h3>Banking the Unbanked</h3>
+            <h4>Banking the Unbanked</h4>
             <p>Blockchain allows individuals without access to banks to store wealth and conduct transactions. According to The World Bank, 1.4 billion adults globally are unbanked, mostly living in developing countries. Blockchain provides these people with an opportunity to secure their wealth in a decentralized system.</p>
         </section>
     </main>
     <hr>
-    <footer>
-        <div class="footer-content">
-            <p>Connect with me on social media</p>
-            <div class="social-media-icons">
-                <a href="https://www.instagram.com/arnas.silaikis?utmsource=gr&igsh=bW16Z29rajFINHVx" target="_blank"><img src="./Pic/footer/instagram.png" alt="instagram"></a>
-                <a href="https://www.facebook.com/profile.php?id=100007990363206" target="_blank"><img src="./Pic/footer/facebook.png" alt="facebook"></a>
-                <a href="https://github.com/Krybas" target="_blank"><img src="./Pic/footer/github-sign.png" alt="github"></a>
-            </div>
-            <p>&copy; 2024 CryptoWiki</p>
+
+    <footer class="text-center pt-3 pb-1">
+        <p>Connect with me on social media</p>
+        <div class="social-media-icons">
+            <a href="https://www.instagram.com/arnas.silaikis" target="_blank">
+                <img src="./Pic/footer/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100007990363206" target="_blank">
+                <img src="./Pic/footer/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://github.com/Krybas" target="_blank">
+                <img src="./Pic/footer/github-sign.png" alt="GitHub">
+            </a>
         </div>
+        <p>&copy; 2024 CryptoWiki</p>
     </footer>
+
     <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html> 
