@@ -4,11 +4,12 @@
     <title>CryptoWiki</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style/custom.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<body data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">CryptoWiki</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,12 +22,19 @@
                     <li class="nav-item"><a class="nav-link" href="blockchain.html">Blockchain</a></li>
                     <li class="nav-item"><a class="nav-link active" href="glossary.html">Glossary</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="game.html">Game</a></li>
                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Settings</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Dark mode</a></li>
-                            <li><a class="dropdown-item" href="#">Light mode</a></li>
+                            <li><a class="dropdown-item" id="mode">Dark mode</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Text size</a></li>
+                            <li>
+                                <label for="text-size-percentage" class="dropdown-item disabled">Header Size (%):</label>
+                                <input type="number" id="text-size-percentage" class="form-control" placeholder="Enter size (%)" min="50" max="200" value="100">
+                            </li>
+                            <li>
+                                <label for="text-color" class="dropdown-item disabled">Header Color:</label>
+                                <input type="color" id="text-color" class="form-control form-control-color" value="#000000">
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -34,92 +42,92 @@
         </div>
     </nav>
 
-    <main class="content">
+    <main class="container">
         <header class="content text-center mt-5 pt-3 w-50 mx-auto">
             <h2>Glossary</h2>
             <p>Expand your knowledge of cryptocurrency and blockchain technology by familiarizing yourself with the following terms and concepts.</p>
         </header>
         <hr>
-        <h3 class="mx-auto text-center">Jump to a section by clicking a letter</h3>
+        <h3 class="mx-auto text-center pb-4">Jump to a section by clicking a letter</h3>
         <div class="alphabet w-75 mx-auto">
             <div class="row gap-2">
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#A" class="btn btn-outline-primary">A</a>
+                <div class="col-3 col-md-1">
+                    <a href="#A" class="btn btn-primary btn-lg">A</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#B" class="btn btn-outline-primary">B</a>
+                <div class="col-3 col-md-1">
+                    <a href="#B" class="btn btn-primary btn-lg">B</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#C" class="btn btn-outline-primary">C</a>
+                <div class="col-3 col-md-1">
+                    <a href="#C" class="btn btn-primary btn-lg">C</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#D" class="btn btn-outline-primary">D</a>
+                <div class="col-3 col-md-1">
+                    <a href="#D" class="btn btn-primary btn-lg">D</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#E" class="btn btn-outline-primary">E</a>
+                <div class="col-3 col-md-1">
+                    <a href="#E" class="btn btn-primary btn-lg">E</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#F" class="btn btn-outline-primary">F</a>
+                <div class="col-3 col-md-1">
+                    <a href="#F" class="btn btn-primary btn-lg">F</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#G" class="btn btn-outline-primary">G</a>
+                <div class="col-3 col-md-1">
+                    <a href="#G" class="btn btn-primary btn-lg">G</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#H" class="btn btn-outline-primary">H</a>
+                <div class="col-3 col-md-1">
+                    <a href="#H" class="btn btn-primary btn-lg">H</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#I" class="btn btn-outline-primary">I</a>
+                <div class="col-3 col-md-1">
+                    <a href="#I" class="btn btn-primary btn-lg">I</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#J" class="btn btn-outline-primary">J</a>
+                <div class="col-3 col-md-1">
+                    <a href="#J" class="btn btn-primary btn-lg">J</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#K" class="btn btn-outline-primary">K</a>
+                <div class="col-3 col-md-1">
+                    <a href="#K" class="btn btn-primary btn-lg">K</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#L" class="btn btn-outline-primary">L</a>
+                <div class="col-3 col-md-1">
+                    <a href="#L" class="btn btn-primary btn-lg">L</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#M" class="btn btn-outline-primary">M</a>
+                <div class="col-3 col-md-1">
+                    <a href="#M" class="btn btn-primary btn-lg">M</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#N" class="btn btn-outline-primary">N</a>
+                <div class="col-3 col-md-1">
+                    <a href="#N" class="btn btn-primary btn-lg">N</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#O" class="btn btn-outline-primary">O</a>
+                <div class="col-3 col-md-1">
+                    <a href="#O" class="btn btn-primary btn-lg">O</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#P" class="btn btn-outline-primary">P</a>
+                <div class="col-3 col-md-1">
+                    <a href="#P" class="btn btn-primary btn-lg">P</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#Q" class="btn btn-outline-primary">Q</a>
+                <div class="col-3 col-md-1">
+                    <a href="#Q" class="btn btn-primary btn-lg">Q</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#R" class="btn btn-outline-primary">R</a>
+                <div class="col-3 col-md-1">
+                    <a href="#R" class="btn btn-primary btn-lg">R</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#S" class="btn btn-outline-primary">S</a>
+                <div class="col-3 col-md-1">
+                    <a href="#S" class="btn btn-primary btn-lg">S</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#T" class="btn btn-outline-primary">T</a>
+                <div class="col-3 col-md-1">
+                    <a href="#T" class="btn btn-primary btn-lg">T</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#U" class="btn btn-outline-primary">U</a>
+                <div class="col-3 col-md-1">
+                    <a href="#U" class="btn btn-primary btn-lg">U</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#V" class="btn btn-outline-primary">V</a>
+                <div class="col-3 col-md-1">
+                    <a href="#V" class="btn btn-primary btn-lg">V</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#W" class="btn btn-outline-primary">W</a>
+                <div class="col-3 col-md-1">
+                    <a href="#W" class="btn btn-primary btn-lg">W</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#X" class="btn btn-outline-primary">X</a>
+                <div class="col-3 col-md-1">
+                    <a href="#X" class="btn btn-primary btn-lg">X</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#Y" class="btn btn-outline-primary">Y</a>
+                <div class="col-3 col-md-1">
+                    <a href="#Y" class="btn btn-primary btn-lg">Y</a>
                 </div>
-                <div class="col-3 col-md-1 p-2">
-                    <a href="#Z" class="btn btn-outline-primary">Z</a>
+                <div class="col-3 col-md-1">
+                    <a href="#Z" class="btn btn-primary btn-lg">Z</a>
                 </div>
             </div>
         </div>
@@ -304,7 +312,7 @@
         <p>&copy; 2024 CryptoWiki</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -7,17 +7,12 @@
 .social-media-icons img {
     width: 40px;
     height: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .social-media-icons img:hover {
     transform: scale(1.1);
     transition: transform 0.3s;
-}
-
-.card {
-    border: 2px solid black;
-    padding: 15px;
 }
 
 .card img {
@@ -34,31 +29,13 @@
 .main-section {
     padding: 20px;
     margin: 20px auto;
-    border: 1px solid black;
-    background: #fff;
     border-radius: 10px;
-    max-width: 1200px;
 }
 
-.main-section h2 {
-    margin-bottom: 10px;
-    color: #444;
-}
-
-.main-section span {
-    color: #000;
+span {
     font-weight: bold;
 }
-.main-section p {
-    margin-bottom: 10px;
-    font-size: 1rem;
-}
-
-.key-takeaways {
-    padding-left: 20px;
-}
-
-.key-takeaways h2 {
+p {
     margin-bottom: 10px;
 }
 
@@ -66,20 +43,11 @@
     list-style-type: disc;
 }
 
-.coin-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
 .coin-card {
     text-align: center;
     padding: 7px;
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    background: #fafafa;
     transition: transform 0.2s ease-in-out;
     width: 150px;
     cursor: pointer;
@@ -92,25 +60,12 @@
 .coin-card:hover img {
     animation: cardAnimation 0.6s ease-in-out forwards;
 }
-.coin-card img {
-    max-width: 100px;
-    margin-bottom: 10px;
-}
-
-.coin-card h3 {
-    font-size: 1.2rem;
-    color: #222;
-}
 
 img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
-footer {
-    background-color: #212529;
-    color: #ffffff;
-}
-
 
 #navbar-container {
     position: fixed;
@@ -181,5 +136,74 @@ footer {
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+.score {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.h {
+    color: #33750d;
+}
+.b {
+    color: #d1a000;
+}
+.board {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.cell {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.cell:hover {
+    background-color: #dee2e6;
+}
+
+.cell.taken {
+    cursor: not-allowed;
+}
+.cell.winner {
+    background-color: #4caf50 !important;
+    color: #023d06;
+    gap: 10px;
+}
+
+.score {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#status {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.thinking::after {
+    content: " .";
+    animation: dots 1s steps(3, end) infinite;
+}
+
+@keyframes dots {
+    0% {
+        content: " .";
+    }
+    33% {
+        content: " ..";
+    }
+    66% {
+        content: " ...";
+    }
+    100% {
+        content: " .";
     }
 }

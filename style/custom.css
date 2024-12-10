@@ -1,0 +1,107 @@
+[data-bs-theme="light"] {
+    color-scheme: light;
+    --bs-body-color: #131313;
+    --bs-body-bg: var(--bs-gray-300);
+
+    .navbar, footer {
+        background-color: #4a4b53;
+    }
+    .dropdown-menu.show {
+        --bs-dropdown-bg: var(--bs-gray-100);
+    }
+    a.dropdown-item:hover {
+        background: var(--bs-gray-300);
+    }
+    .nav-link {
+        color: var(--bs-gray-400);
+    }
+    .nav-link:hover {
+        background: #272727;
+        border-radius: 5px;
+    }
+
+    footer {
+        color: white;
+    }
+
+    .main-section {
+        background-color: var(--bs-gray-100);
+        border: 1px solid black;
+    }
+    .coin-card {
+        background: #fafafa;
+    }
+    .card {
+        --bs-card-bg: var(--bs-gray-100);
+        border: 1px solid black;
+    }
+
+    .form-control {
+        background-color: var(--bs-gray-200);
+    }
+
+    .cell {
+        background-color: #cacaca;
+        border: 2px solid #333;
+    }
+    .cell:hover {
+        background-color: #f0f0f0;
+    }
+    .cell.taken {
+        background-color: #ececec;
+    }
+}
+
+[data-bs-theme="dark"] {
+    color-scheme: dark;
+    --bs-body-color: #f8f9fa;
+    --bs-body-bg: #121212;
+
+    .navbar, footer {
+        background-color: #0c0c0f;
+    }
+    .dropdown-menu.show {
+        --bs-dropdown-bg: #2c2c2e;
+    }
+    a.dropdown-item:hover {
+        background: #3c3c3e;
+    }
+    .nav-link {
+        color: #a0a0a0;
+    }
+    .nav-link:hover {
+        background: #3c3c3e;
+        border-radius: 5px;
+    }
+
+    footer {
+        color: #e0e0e0;
+    }
+
+    .main-section {
+        background-color: #1e1e1f;
+        border: 1px solid #2e2e2e;
+    }
+    .coin-card {
+        background: #2a2a2b;
+    }
+    .card {
+        --bs-card-bg: #2c2c2e;
+        border: 1px solid #2e2e2e;
+    }
+
+    .form-control {
+        background-color: #2a2a2b;
+    }
+    
+    .cell {
+        background-color: #000;
+        border: 2px solid #333;
+    }
+    .cell:hover {
+        background-color: #222;
+    }
+    .cell.taken {
+        background-color: #111;
+    }
+}
